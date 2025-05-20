@@ -42,7 +42,7 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
@@ -124,7 +124,7 @@ const data = {
   restaurants: [
     {
       name: "Restaurantes",
-      url: "#",
+      url: "/restaurants",
       icon: IconListDetails,
     },
     {
