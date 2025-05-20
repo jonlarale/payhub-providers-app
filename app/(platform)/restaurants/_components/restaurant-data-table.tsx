@@ -228,14 +228,20 @@ export const columns: ColumnDef<Restaurant>[] = [
             <DropdownMenuItem>Ver detalles del restaurante</DropdownMenuItem>
             <DropdownMenuItem>Editar restaurante</DropdownMenuItem>
             <DropdownMenuItem>Ver información del propietario</DropdownMenuItem>
-            {restaurant.status !== "blocked" && (
-              <DropdownMenuItem className="text-red-600">
-                Bloquear restaurante
-              </DropdownMenuItem>
-            )}
+            {restaurant.status !== "blocked" &&
+              restaurant.status !== "deleted" && (
+                <DropdownMenuItem className="text-yellow-600">
+                  Bloquear restaurante
+                </DropdownMenuItem>
+              )}
             {restaurant.status === "blocked" && (
               <DropdownMenuItem className="text-green-600">
                 Desbloquear restaurante
+              </DropdownMenuItem>
+            )}
+            {restaurant.status !== "deleted" && (
+              <DropdownMenuItem className="text-red-600">
+                Eliminar restaurante
               </DropdownMenuItem>
             )}
           </DropdownMenuContent>
