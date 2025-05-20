@@ -47,7 +47,7 @@ const data = {
     },
     {
       title: "Administradores",
-      url: "#",
+      url: "/admin",
       icon: IconUserCog,
     },
     {
