@@ -19,7 +19,7 @@ import {
   IconDeviceMobile,
   IconUserCog,
 } from "@tabler/icons-react";
-
+import { SiteHeader } from "@/components/site-header";
 import { NavMain } from "@/components/nav-main";
 import { NavMerchant } from "@/components/nav-merchant";
 import { NavSecondary } from "@/components/nav-secondary";
