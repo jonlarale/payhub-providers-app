@@ -212,7 +212,10 @@ export const columns: ColumnDef<Restaurant>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
+            <Button
+              variant="ghost"
+              className="h-8 w-8 p-0 hover:cursor-pointer"
+            >
               <span className="sr-only">Abrir menú</span>
               <MoreHorizontal className="h-4 w-4" />
             </Button>
@@ -221,26 +224,33 @@ export const columns: ColumnDef<Restaurant>[] = [
             <DropdownMenuLabel>Acciones</DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(restaurant.id)}
+              className="hover:cursor-pointer"
             >
               Copiar ID del restaurante
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Ver detalles del restaurante</DropdownMenuItem>
-            <DropdownMenuItem>Editar restaurante</DropdownMenuItem>
-            <DropdownMenuItem>Ver información del propietario</DropdownMenuItem>
+            <DropdownMenuItem className="hover:cursor-pointer">
+              Ver detalles del restaurante
+            </DropdownMenuItem>
+            <DropdownMenuItem className="hover:cursor-pointer">
+              Editar restaurante
+            </DropdownMenuItem>
+            <DropdownMenuItem className="hover:cursor-pointer">
+              Ver información del propietario
+            </DropdownMenuItem>
             {restaurant.status !== "blocked" &&
               restaurant.status !== "deleted" && (
-                <DropdownMenuItem className="text-yellow-600">
+                <DropdownMenuItem className="text-yellow-600 hover:cursor-pointer">
                   Bloquear restaurante
                 </DropdownMenuItem>
               )}
             {restaurant.status === "blocked" && (
-              <DropdownMenuItem className="text-green-600">
+              <DropdownMenuItem className="text-green-600 hover:cursor-pointer">
                 Desbloquear restaurante
               </DropdownMenuItem>
             )}
             {restaurant.status !== "deleted" && (
-              <DropdownMenuItem className="text-red-600">
+              <DropdownMenuItem className="text-red-600 hover:cursor-pointer">
                 Eliminar restaurante
               </DropdownMenuItem>
             )}
