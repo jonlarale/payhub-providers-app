@@ -290,7 +290,7 @@ export function RestaurantDataTable() {
     <div className="w-full">
       <div className="flex items-center py-4">
         <Input
-          placeholder="Filtrar restaurantes..."
+          placeholder="Buscar restaurante ..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
@@ -299,7 +299,7 @@ export function RestaurantDataTable() {
         />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto">
+            <Button variant="outline" className="ml-auto hover:cursor-pointer">
               Columnas <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>

@@ -43,7 +43,7 @@ export function NavUser({
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground hover:cursor-pointer"
             >
               <Avatar className="h-8 w-8 rounded-lg grayscale">
                 <AvatarImage src={user.avatar} alt={user.name} />
@@ -80,17 +80,17 @@ export function NavUser({
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
+              <DropdownMenuItem className="hover:cursor-pointer">
                 <IconUserCircle />
                 Cuenta
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem className="hover:cursor-pointer">
                 <IconNotification />
                 Notificaciones
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem className="hover:cursor-pointer">
               <IconLogout />
               Cerrar sesión
             </DropdownMenuItem>

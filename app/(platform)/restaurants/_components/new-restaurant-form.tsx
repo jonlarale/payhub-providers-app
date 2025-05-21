@@ -97,7 +97,7 @@ export function NewRestaurantForm({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="ml-4" variant="default">
+        <Button className="ml-4 hover:cursor-pointer" variant="default">
           <PlusCircle className="mr-2 h-4 w-4" />
           Añadir restaurante
         </Button>
@@ -179,7 +179,9 @@ export function NewRestaurantForm({
               )}
             />
             <DialogFooter>
-              <Button type="submit">Enviar invitación</Button>
+              <Button type="submit" className="hover:cursor-pointer">
+                Enviar invitación
+              </Button>
             </DialogFooter>
           </form>
         </Form>

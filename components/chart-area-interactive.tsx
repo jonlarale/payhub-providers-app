@@ -180,9 +180,15 @@ export function ChartAreaInteractive() {
             variant="outline"
             className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex"
           >
-            <ToggleGroupItem value="90d">Últimos 3 meses</ToggleGroupItem>
-            <ToggleGroupItem value="30d">Últimos 30 días</ToggleGroupItem>
-            <ToggleGroupItem value="7d">Últimos 7 días</ToggleGroupItem>
+            <ToggleGroupItem value="90d" className="hover:cursor-pointer">
+              Últimos 3 meses
+            </ToggleGroupItem>
+            <ToggleGroupItem value="30d" className="hover:cursor-pointer">
+              Últimos 30 días
+            </ToggleGroupItem>
+            <ToggleGroupItem value="7d" className="hover:cursor-pointer">
+              Últimos 7 días
+            </ToggleGroupItem>
           </ToggleGroup>
           <Select value={timeRange} onValueChange={setTimeRange}>
             <SelectTrigger
